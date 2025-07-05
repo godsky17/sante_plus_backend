@@ -140,3 +140,11 @@ Route::prefix('ordonnances')->group(function () {
     Route::put('/{id}', [OrdonnanceController::class, 'update']);
     Route::delete('/{id}', [OrdonnanceController::class, 'destroy']);
 });
+
+
+Route::get('/test', function () {
+    return response()->json([
+        'message' => 'Laravel API fonctionne 🎉',
+        'status' => 'success'
+    ]);
+});
